@@ -125,9 +125,9 @@
 			Statement stmt=con.createStatement(); 
 			String sql = "select * from customers where custID = '"+session.getAttribute("SES_ID")+ "'";
 		
-			int x = stmt.executeQuery(sql);
+			ResultSet rs; = stmt.executeQuery(sql);
 			
-			if(x>0){%>
+			if(rs.next()){%>
 				<script>alert("Successfully Updated");</script>
 			<%}else{%>
 				<script>alert("Failed");</script>
