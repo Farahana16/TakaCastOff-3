@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ page import="java.sql.*" %>
 <%
-	String driver = "org.postgresql.jdbc.Driver";
+	String driver = "org.postgresql.Driver";
 	String connectionUrl = "jdbc:postgresql://ec2-54-72-155-238.eu-west-1.compute.amazonaws.com:5432/";
 	String database = "d3lt7uttu2s0h3";
 	String userid = "yyehssgxzsdqki";
