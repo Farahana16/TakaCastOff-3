@@ -22,10 +22,10 @@
 			
 			int x = stmt.executeUpdate(sql);
 			if(x>0){
-				response.sendRedirect("homepage.jsp");
+				response.sendRedirect("index.jsp");
 			}else{
 				request.setAttribute("error", "Error encountered. Try Again");
-				RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("singUp.jsp");
 				rd.include(request, response);
 			}
 			con.close();
