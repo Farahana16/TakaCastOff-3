@@ -20,11 +20,11 @@
 			con = DriverManager.getConnection("jdbc:postgresql://ec2-54-72-155-238.eu-west-1.compute.amazonaws.com:5432/d3lt7uttu2s0h3", "yyehssgxzsdqki","9e580d650d0f1be9f361083b5a0741807d83c7d92a887482a0630f19cd2dc9c3");
 			String sql="Update customers set custID=?,custUsername=?,custPhoneNum=?,custPwd=?,custEmail=? where custID="+custID;
 			ps = con.prepareStatement(sql);
-			ps.setString(1, custID);
-			ps.setString(2, custUsername);
-			ps.setString(3, custPhoneNum);
-			ps.setString(4, custPwd);
-			ps.setString(5, custEmail);
+			
+			ps.setString(1, custUsername);
+			ps.setString(2, custPhoneNum);
+			ps.setString(3, custPwd);
+			ps.setString(4, custEmail);
 			int i = ps.executeUpdate();
 			if(i > 0){
 		    response.sendRedirect("displayUpdate.jsp");
