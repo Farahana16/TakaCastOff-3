@@ -4,7 +4,7 @@
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%
-	String driver = "com.postgresql.Driver";
+	String driver = "org.postgresql.Driver";
 	String connectionUrl = "jdbc:postgresql://ec2-54-72-155-238.eu-west-1.compute.amazonaws.com:5432/";
 	String database = "d3lt7uttu2s0h3";
 	String userid = "yyehssgxzsdqki";
@@ -161,8 +161,7 @@
 			    <div class="column">
 			      <%
 			      			//String ID = session.getAttribute("SES_ID");
-							connection = DriverManager.getConnection(connectionUrl+database, userid, password);
-							statement=connection.createStatement();
+							connection = DriverManager.getConnection("jdbc:postgresql://ec2-54-72-155-238.eu-west-1.compute.amazonaws.com:5432/d3lt7uttu2s0h3", "yyehssgxzsdqki","9e580d650d0f1be9f361083b5a0741807d83c7d92a887482a0630f19cd2dc9c3");							statement=connection.createStatement();
 							String sql ="select * from customers where custID = '"+session.getAttribute("SES_ID")+ "'";
 							resultSet = statement.executeQuery(sql);
 						while(resultSet.next()){
