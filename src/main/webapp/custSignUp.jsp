@@ -25,7 +25,7 @@
 				response.sendRedirect("homepage.jsp");
 			}else{
 				request.setAttribute("error", "Error encountered. Try Again");
-				RequestDispatcher rd = request.getRequestDispatcher("signUp.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
 				rd.include(request, response);
 			}
 			con.close();
