@@ -119,7 +119,7 @@
         String custEmail = request.getParameter("custEmail");
 		String custUsername = request.getParameter("custUsername");
 		try{
-			Class.forName("com.postgresql.Driver");
+			Class.forName("org.postgresql.Driver");
 			Connection con = DriverManager.getConnection("jdbc:postgresql://ec2-54-72-155-238.eu-west-1.compute.amazonaws.com:5432/d3lt7uttu2s0h3", "yyehssgxzsdqki","9e580d650d0f1be9f361083b5a0741807d83c7d92a887482a0630f19cd2dc9c3");
 			PreparedStatement pst = con.prepareStatement("insert into customers(custName, custPwd, custPhoneNum, custEmail, custUsername)values(?,?,?,?,?)");
 		
@@ -162,7 +162,7 @@
                                 PreparedStatement pst;
                                 ResultSet rs;
         
-                                Class.forName("com.mysql.jdbc.Driver");
+                                Class.forName("org.mysql.jdbc.Driver");
                                 con = DriverManager.getConnection("jdbc:mysql://localhost:3306/tiedye","root","");
                                 
                                   String query = "select * from customers";
